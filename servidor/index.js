@@ -157,13 +157,13 @@ app.post("/createLibro",(req, res) => {
 app.get("/libros",(req,res) => {
     db.query('SELECT * FROM libros',
     
-    (err,result)=>{
-        if(err){
-            console.log(err + "error de leer");
-        }else{
-            res.send(result)
+        (err,result)=>{
+            if(err){
+                console.log(err + "error de leer");
+            }else{
+                res.send(result)
+            }
         }
-    }
     );
 })
 

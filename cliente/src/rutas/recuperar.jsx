@@ -53,29 +53,29 @@ export default function Recuperar() {
                         <div className='mb-8 font-semibold text-4xl text-center'>Recuperacion de cuenta</div>
                         
                         <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" > Correo Electronico </label>
-                            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            <label className="text-lg block text-gray-700 text-sm font-bold mb-2" > Correo Electronico </label>
+                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                             type="email" placeholder="Example@gmail.com" autoComplete="off"  value={correo} onChange={(e) => setCorreo(e.target.value)} />
                         </div>
                         <div className="mb-6">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" > Usuario </label>
-                            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            <label className="text-lg block text-gray-700 text-sm font-bold mb-2" > Usuario </label>
+                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="text" placeholder="Ingresa tu nuevo usuario" autoComplete="off" value={usuario} onChange={(e) => setUsuario(e.target.value)} />
                         </div>
                         <div className="mb-6">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" > Contraseña </label>
-                            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            <label className="text-lg block text-gray-700 text-sm font-bold mb-2" > Contraseña </label>
+                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                             type="password" placeholder="Ingresa tu nueva contraseña" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         </div>
 
                         <div className="items-center justify-center text-center">
                             <div className='mb-2 '>
-                                <button className="mx-3 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                <button className="text-lg mx-3 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 type="submit" >
                                     Recuperar
                                 </button>
                                 <Link to='/'>
-                                    <button className="mx-3 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                                    <button className="text-lg mx-3 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                                         Volver
                                     </button>
                                 </Link>

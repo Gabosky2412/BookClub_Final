@@ -78,33 +78,33 @@ export default function Login() {
                     <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div className='mb-8 font-semibold text-4xl text-center'>Iniciar Sesión</div>
                         <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" > Usuario </label>
-                            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            <label className="block text-gray-700 text-sm font-bold mb-2 text-lg" > Usuario </label>
+                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="username" type="text" placeholder="Usuario" autoComplete="off" value={nombre} required onChange={handleNombreChange} />
                         </div>
                         <div className="mb-6">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" > Contraseña </label>
-                            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            <label className="block text-gray-700 text-sm font-bold mb-2 text-lg" > Contraseña </label>
+                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                             id="password" type="password" placeholder="******************" autoComplete="off" value={contraseña} required onChange={handleContraseñaChange}/>
                         </div>
                         <div className="items-center justify-center text-center">
                             <div className='mb-4 '>
                                 <Link to='/main'>
-                                    <button className="mx-3 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                    <button className="mx-3 hover:shadow-red-500 bg-blue-600 hover:bg-blue-800 text-white text-lg font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                     type="submit" onClick={login} >
                                         Ingresar
                                     </button>
                                 </Link>
                                 <Link to="/registro">
-                                    <button className="mx-3 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                    <button className="mx-3 bg-blue-600 hover:bg-blue-800 text-white text-lg font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                     type="submit" >
                                         Registrar
                                     </button>
                                 </Link>
                             </div>
                             <br />
-                            <p className='font-bold text-sm text-red-500 '><Link to='/recuperar' className="hover:text-red-700">¿Olvidaste tu contraseña?</Link></p>
-                            <p className='font-bold text-sm text-red-500 mt-2'><Link to='/eliminar' className="hover:text-red-700">¿Deseas eliminar tu cuenta?</Link></p>
+                            <p className='font-bold text-base text-red-500 '><Link to='/recuperar' className="hover:text-red-700">¿Olvidaste tu contraseña?</Link></p>
+                            <p className='font-bold text-base text-red-500 mt-2'><Link to='/eliminar' className="hover:text-red-700">¿Deseas eliminar tu cuenta?</Link></p>
 
                         </div>
                     </form>

@@ -33,7 +33,7 @@ export default function Add_Libro() {
                 getUsuarios();
                 limpiarCampos();
                 Swal.fire({
-                    tittle: "<strong>Libro registrado con exito!</strong>",
+                    title: "<strong>Libro registrado con exito!</strong>",
                     html: `<i>El libro <strong>${titulo}</strong> se ha guardado correctamente.</i>`,
                     icon: 'success',
                     timer: 2000
@@ -55,7 +55,7 @@ export default function Add_Libro() {
             getUsuarios();
             limpiarCampos();
             Swal.fire({
-                tittle: "<strong>Libro actualizado con exito!</strong>",
+                title: "<strong>Libro actualizado con exito!</strong>",
                 html: `<i>El libro <strong>${titulo}</strong> se ha actualizado correctamente.</i>`,
                 icon: 'success',
                 timer: 2000
@@ -72,7 +72,7 @@ export default function Add_Libro() {
             getUsuarios();
             limpiarCampos();
             Swal.fire({ 
-                tittle: "<strong>Libro eliminado con exito!</strong>",
+                title: "<strong>Libro eliminado con exito!</strong>",
                 html: `<i>El libro <strong>${titulo}</strong> se ha eliminado correctamente.</i>`,
                 icon: 'success',    
                 timer: 2000
@@ -160,7 +160,6 @@ export default function Add_Libro() {
                     <table className="mb-16">
                         <thead className="">
                             <tr >
-                                <th scope="col" className="px-12 py-6">#</th>
                                 <th scope="col" className="px-12 py-6">Titulo</th>
                                 <th scope="col" className="px-12 py-6">Autor</th>
                                 <th scope="col" className="px-12 py-6">Genero</th>
@@ -172,7 +171,6 @@ export default function Add_Libro() {
                                 librosList.map((val)=>{ 
 
                                     return <tr key={val.id}>
-                                                <th scope="row">{val.id}</th>
                                                 <td>{val.titulo}</td>
                                                 <td>{val.autor}</td>
                                                 <td>{val.genero}</td>

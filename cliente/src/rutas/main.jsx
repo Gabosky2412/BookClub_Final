@@ -16,7 +16,7 @@ export default function Main(){
     getUsuarios();
 
     return(
-        <div>
+        <div className="fondo">
         <Header />
         <h1 className="font-bold text-5xl text-center mt-8 mb-14">LEE LOS MEJORES LIBROS</h1>
 
@@ -24,8 +24,8 @@ export default function Main(){
                 librosList.map((val)=>{ 
 
                     return <div key={val.id}>
-                                <div className="mb-12 ">
-                                    <div className="flex justify-start items-center border-4 border-slate-900 rounded-lg w-3/5 mx-auto shadow-2xl">
+                                <div className="pb-12 fondo">
+                                    <div className="flex justify-start items-center border-4 border-slate-900 rounded-lg w-3/5 mx-auto shadow-2xl bg-white">
                                         <img src={portada_nula} alt='logo_principal' className="h-80 m-8 rounded-lg border-2 border-slate-900 shadow-2xl" />
                                         <div className="m-16">
                                             <h2 className="text-2xl mb-8"><strong>Título:</strong> {val.titulo}</h2>
