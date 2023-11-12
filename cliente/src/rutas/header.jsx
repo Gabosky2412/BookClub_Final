@@ -20,9 +20,9 @@ export default function Header() {
                         <img src={logo} alt='logo_principal ' className="w-3/4 h-3/4 ml-6"/>
                 </Link>
                 <nav className="flex items-center justify-center">
-                    <Link to='/add_libro'><p className="mr-8 text-xl hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Agg Libro</p></Link>
-                    <Link to='/perfil'><p className="mr-8 text-xl hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Perfil</p></Link>
-                    <Link to='/'><p className="mr-12 text-xl hover:text-red-500 text-white font-bold py-2 px-4 rounded" onClick={Salir}>Salir</p></Link>
+                    <Link to='/add_libro'><p className="mx-2 text-xl hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Agg Libro</p></Link>
+                    <Link to='/perfil'><p className="mx-2 text-xl hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Perfil</p></Link>
+                    <Link to='/'><p className="mx-6 text-xl hover:text-red-500 text-white font-bold py-2 px-4 rounded" onClick={Salir}>Salir</p></Link>
                 </nav>
             </nav>
         </div>
