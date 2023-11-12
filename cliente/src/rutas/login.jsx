@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import user from '../icons/user.png'
+import key from '../icons/password.png'
+import eye from '../icons/eye.png'
+import eyeOff from '../icons/eye.png';
+
 
 export default function Login() {
     const [nombre, setNombre] = useState('');
@@ -10,11 +15,15 @@ export default function Login() {
     const navigate = useNavigate();
     const [, setNombreError] = useState('');
     const [, setContraseñaError] = useState('');
+    const [mostrarContraseña, setMostrarContraseña] = useState(false); 
+
+    const toggleMostrarContraseña = () => {
+        setMostrarContraseña(!mostrarContraseña);
+    };
 
     const login = (event) => {
-        event.preventDefault(); // Evita la recarga de la página al enviar el formulario
+        event.preventDefault(); 
     
-        // Verifica si los campos de usuario y contraseña están llenos antes de enviar la solicitud.
         if (!nombre || !contraseña) {
             Swal.fire({
                 title: '<strong>Campos requeridos vacíos</strong>',
@@ -78,14 +87,22 @@ export default function Login() {
                     <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div className='mb-8 font-semibold text-4xl text-center'>Iniciar Sesión</div>
                         <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2 text-lg" > Usuario </label>
-                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="username" type="text" placeholder="Usuario" autoComplete="off" value={nombre} required onChange={handleNombreChange} />
+                            <label className="block text-gray-700 text-sm font-bold mb-2 text-lg text-center" > Usuario </label>
+                            <div className="flex">
+                                <img src={user} className="w-6 h-6 mt-2 mr-2"/>
+                                <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="username" type="text" placeholder="Usuario" autoComplete="off" value={nombre} required onChange={handleNombreChange} autoFocus/>
+                            </div>
                         </div>
                         <div className="mb-6">
-                            <label className="block text-gray-700 text-sm font-bold mb-2 text-lg" > Contraseña </label>
-                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                            id="password" type="password" placeholder="******************" autoComplete="off" value={contraseña} required onChange={handleContraseñaChange}/>
+                            <label className="block text-gray-700 text-sm font-bold mb-2 text-lg text-center" > Contraseña </label>
+                            <div className="flex">
+                                <img src={key} className="w-6 h-6 mt-2 mr-2"/>
+                                <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                id="password" type={mostrarContraseña ? "text" : "password"} placeholder="******************" autoComplete="off" value={contraseña} required onChange={handleContraseñaChange} />
+                                <img className="w-8 h-8 mt-1 ml-2 hover:cursor-pointer opacity-40 hover:opacity-100"
+                                id="Eye" src={mostrarContraseña ? eyeOff : eye} onClick={toggleMostrarContraseña} />
+                            </div>
                         </div>
                         <div className="items-center justify-center text-center">
                             <div className='mb-4 '>
@@ -110,6 +127,7 @@ export default function Login() {
                     </form>
                 </div>
             </div>
+
         </div>
     );
 }

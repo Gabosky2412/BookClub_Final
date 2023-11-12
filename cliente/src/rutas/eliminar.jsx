@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Axios from 'axios';
+import mail from '../icons/mail.png'
 
 export default function Eliminar() {
     const [correo, setCorreo] = useState('');
@@ -64,8 +65,11 @@ export default function Eliminar() {
                         
                         <div className="mb-4">
                             <label className="text-lg block text-gray-700 text-sm font-bold mb-2" > Correo Electrónico </label>
-                            <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                            type="email" placeholder="Example@gmail.com" autoComplete="off" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                            <div className='flex'>
+                                <img src={mail} className="w-6 h-6 mt-2 mr-2"/>
+                                <input className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                type="email" placeholder="Example@gmail.com" autoComplete="off" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                            </div>
                         </div>
 
                         <div className="items-center justify-center text-center">
