@@ -15,9 +15,23 @@ export default function Registro() {
 
     const { register, handleSubmit, formState: { errors }, reset} = useForm();
 
-    const onSubmit = handleSubmit((data) =>{
-        console.log(data);
-
+    const onSubmit = handleSubmit(async (data) => {
+        // Verificar si el correo ya existe
+        try {
+            const response = await Axios.get(`http://localhost:3001/verificarCorreo/${data.correo}`);
+            if (response.data.existe) {
+                Swal.fire({
+                    title: '<strong>Error de registro</strong>',
+                    html: '<i>El correo electrónico ya está registrado. Por favor, elige otro.</i>',
+                    icon: 'error',
+                });
+            return;
+          }
+        } catch (error) {
+            console.error('Error al verificar el correo:', error);
+        }
+    
+        // Si el correo no existe, proceder con el registro
         Axios.post('http://localhost:3001/create', {
             nombre: data.nombre,
             correo: data.correo,
@@ -27,29 +41,29 @@ export default function Registro() {
         .then((response) => {
             if (response.status === 200) {
                 Swal.fire({
-                    title: "<strong>Registro Exitoso!</strong>",
-                    html: `<i>Bienvenido a la familia!</i>`,
+                    title: '<strong>Registro Exitoso!</strong>',
+                    html: '<i>Bienvenido a la familia!</i>',
                     icon: 'success',
-                    timer: 2000
+                    timer: 2000,
                 });
-                console.log('registro exitoso');
+                console.log('Registro exitoso');
             }
         })
-        .catch((error) => {
+            .catch((error) => {
             if (error.response.status === 400) {
-                    // Código de estado 400
+                // Código de estado 400
                 Swal.fire({
                     title: '<strong>Error de registro</strong>',
                     html: `<i>${error.response.data}</i>`,
                     icon: 'error',
                 });
             } else {
-                console.error('Error al registrar usuario:', error);
+              console.error('Error al registrar usuario:', error);
             }
-        });
-
+          });
+    
         reset();
-    })
+    });
 
     const toggleMostrarContraseña = () => {
         setMostrarContraseña(!mostrarContraseña);

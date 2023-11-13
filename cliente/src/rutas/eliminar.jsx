@@ -5,51 +5,7 @@ import mail from '../icons/mail.png'
 import { useForm } from 'react-hook-form';
 
 export default function Eliminar() {
-    // const [correo, setCorreo] = useState('');
-
-    // const eliminar = async () => {
-    //     if (!correo) {
-    //         Swal.fire({
-    //             title: "<strong>Eliminación Fallida</strong>",
-    //             html: "Por favor ingresa tu correo electrónico",
-    //             icon: 'error',
-    //         });
-    //     } else {
-    //         try {
-    //             const response = await Axios.delete(`http://localhost:3001/delete/${correo}`);
     
-    //             if (response.status === 200) {
-    //                 Swal.fire({
-    //                     title: "<strong>Eliminación Exitosa</strong>",
-    //                     html: `<i>Tus datos se eliminaron correctamente</i>`,
-    //                     icon: 'success',
-    //                     timer: 2000,
-    //                 });
-    //                 setCorreo('');
-    //             } else if (response.status === 404) {
-    //                 Swal.fire({
-    //                     title: "<strong>Eliminación Fallida</strong>",
-    //                     html: "Por favor verifica tus datos",
-    //                     icon: 'error',
-    //                 });
-    //             } else {
-    //                 Swal.fire({
-    //                     title: "<strong>Eliminación Fallida</strong>",
-    //                     html: "Por favor verifica tus datos",
-    //                     icon: 'error',
-    //                 });
-    //             }
-    //         } catch (error) {
-    //             console.error(error);
-    //             Swal.fire({
-    //                 title: "<strong>Eliminación Fallida</strong>",
-    //                 html: "Por favor verifica tus datos",
-    //                 icon: 'error',
-    //             });
-    //         }
-    //     }
-    // };
-
     const { register, reset, handleSubmit, formState: { errors }} = useForm();
 
     const onSubmit = handleSubmit((data) => {
