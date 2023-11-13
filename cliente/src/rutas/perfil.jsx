@@ -25,24 +25,25 @@ export default function Perfil() {
                 </div>
             </Link>
 
-            <div id="" className=" flex w-full">
+            <div className="flex flex-col md:flex-row">
 
-                    <div id="" className="w-1/2 flex aling-center items-center justify-center">
-                        <img src={perfil} alt="icono grande perfil" />
+                <div id="imagen" className="md:w-1/2  flex items-center justify-center">
+                    <img src={perfil} alt="icono grande perfil" />
+                </div>
+
+                <div id="info" className="flex flex-col items-center justify-center md:w-1/2   my-28">
+                    <h2 className="font-semibold text-3xl my-4">USUARIO <strong className="text-red-500">CLIENTE</strong></h2>
+
+                    <div className="">
+                        <Link to='/'>
+                            <button id="button1" className="text-xl bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded mt-6"
+                                onClick={Salir}>CERRAR SESIÓN
+                            </button>
+                        </Link>
                     </div>
-
-                    <div id="info" className="flex flex-col items-center justify-center w-1/2">
-                        {/* <h2 className="font-semibold text-3xl my-6 mr-12">NOMBRE <strong className="text-red-500">CLIENTE</strong></h2> */}
-                        <h2 className="font-semibold text-3xl my-6 mr-12">USUARIO <strong className="text-red-500">CLIENTE</strong></h2>
-                        
-                        <div className="botones">
-                            <Link to='/'><button id="button1" className="my-10 mr-12 text-xl bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"
-                            onClick={Salir}>CERRAR SECCION</button></Link>
-                        </div>
-                        
-                    </div>
-
+                </div>
             </div>
+
         </div>
     );
 }
