@@ -24,13 +24,14 @@ export default function Main(){
                 librosList.map((val)=>{ 
 
                     return <div key={val.id}>
-                                <div className="pb-12 fondo">
-                                    <div className="flex justify-start items-center border-4 border-slate-900 rounded-lg w-3/5 mx-auto shadow-2xl bg-white">
-                                        <img src={portada_nula} alt='logo_principal' className="h-80 m-8 rounded-lg border-2 border-slate-900 shadow-2xl" />
-                                        <div className="m-16">
-                                            <h2 className="text-2xl mb-8"><strong>Título:</strong> {val.titulo}</h2>
-                                            <h2 className="text-2xl mb-8"><strong>Autor:</strong> {val.autor}</h2>
-                                            <h2 className="text-2xl"><strong>Género:</strong> {val.genero}</h2>
+                                <div className="py-8 ">
+                                    <div className="flex flex-col lg:flex-row justify-start items-center border-4 border-slate-900 rounded-lg w-3/5 mx-auto shadow-2xl bg-white">
+                                        <img src={portada_nula} alt='logo_principal' className="h-64 m-16 rounded-lg border-2 border-slate-900 shadow-2xl lg:w-58 lg:text-center text-center" />
+                                        <div className="m-8 lg:m-16">
+                                            <h2 className="text-2xl mb-4 lg:mb-8"><strong>Título:</strong> {val.titulo}</h2>
+                                            <h2 className="text-2xl mb-4 lg:mb-8"><strong>Autor:</strong> {val.autor}</h2>
+                                            <h2 className="text-2xl mb-4 lg:mb-8"><strong>Género:</strong> {val.genero}</h2>
+                                            <strong><a className="text-2xl text-red-600 mb-4 lg:mb-8" href={val.link} target="_blank" rel="noopener noreferrer"> Descargar</a></strong>
                                         </div>
                                     </div>
                                 </div>

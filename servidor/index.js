@@ -142,8 +142,9 @@ app.post("/createLibro",(req, res) => {
     const titulo = req.body.titulo
     const autor = req.body.autor
     const genero = req.body.genero
+    const link = req.body.link
 
-    db.query('INSERT INTO libros(titulo,autor,genero) VALUES(?,?,?)',[titulo,autor,genero],
+    db.query('INSERT INTO libros(titulo,autor,genero,link) VALUES(?,?,?,?)',[titulo,autor,genero,link],
     (err,result)=>{
         if(err){
             console.log(err + " error de creacion");
@@ -172,8 +173,9 @@ app.put("/updateLibro",(req, res) => {
     const titulo = req.body.titulo
     const autor = req.body.autor
     const genero = req.body.genero
+    const link = req.body.link
 
-    db.query('UPDATE libros SET titulo = ?,autor = ?,genero = ? WHERE id = ?',[titulo,autor,genero,id],
+    db.query('UPDATE libros SET titulo = ?,autor = ?,genero = ?,link =? WHERE id = ?',[titulo,autor,genero,link,id],
     
     (err,result)=>{
         if(err){

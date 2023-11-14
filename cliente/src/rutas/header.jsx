@@ -21,6 +21,7 @@ export default function Header() {
                 </Link>
                 <nav className="flex items-center justify-center">
                     <Link to='/add_libro'><p className="mx-2 text-xl hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Agg Libro</p></Link>
+                    <Link to='/main'><p className="mx-2 text-xl hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Informacion</p></Link>
                     <Link to='/perfil'><p className="mx-2 text-xl hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Perfil</p></Link>
                     <Link to='/'><p className="mx-6 text-xl hover:text-red-500 text-white font-bold py-2 px-4 rounded" onClick={Salir}>Salir</p></Link>
                 </nav>

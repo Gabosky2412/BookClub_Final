@@ -10,6 +10,7 @@ export default function Add_Libro() {
     const [titulo, setTitulo] = useState('');
     const [autor, setAutor] = useState('');
     const [genero, setGenero] = useState('');
+    const [link, setLink] = useState('');
     const [id, setId] = useState("");
     const [editar, setEditar] = useState(false);
     const [librosList,setLibros] = useState([]);
@@ -28,6 +29,7 @@ export default function Add_Libro() {
                 titulo:titulo,
                 autor:autor,
                 genero:genero,
+                link:link,
             }).then(()=>{
 
                 getUsuarios();
@@ -51,6 +53,7 @@ export default function Add_Libro() {
             titulo:titulo,
             autor:autor,
             genero:genero,
+            link:link,
         }).then(()=>{
             getUsuarios();
             limpiarCampos();
@@ -86,6 +89,7 @@ export default function Add_Libro() {
         setTitulo("");
         setAutor("");
         setGenero("");
+        setLink("");
         setEditar(false);
         
     }
@@ -96,6 +100,7 @@ export default function Add_Libro() {
         setTitulo(val.titulo);
         setAutor(val.autor);
         setGenero(val.genero);
+        setLink(val.link);
         setId(val.id);
     }
 
@@ -119,7 +124,7 @@ export default function Add_Libro() {
             </Link>
 
             <div className="flex flex-col justify-center items-center text-center">
-                <div className='my-8 font-bold text-5xl'>Añade tu libro!</div>
+                <div className='my-8 font-bold text-5xl'>Añade un nuevo libro!</div>
                 <div className="w-full max-w-md mt-12">
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" > Nombre: </label>
@@ -134,7 +139,12 @@ export default function Add_Libro() {
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" > Genero: </label>
                         <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        type="text" placeholder="Genero princpal del libro" autoComplete="off" value={genero} onChange={(e) => setGenero(e.target.value)} />
+                        type="text" placeholder="Genero principal del libro" autoComplete="off" value={genero} onChange={(e) => setGenero(e.target.value)} />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" > Link: </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        type="text" placeholder="Link para visualizar el libro" autoComplete="off" value={link} onChange={(e) => setLink(e.target.value)} />
                     </div>
 
 
