@@ -1,7 +1,7 @@
 import Header from "./header";
 import { Link } from 'react-router-dom'
 import perfil from '../logos/icono_perfil.png'
-import volver from '../logos/icono_volver.png'
+import Barra from "./barra";
 import Swal from "sweetalert2";
 
 export default function Perfil() {
@@ -16,18 +16,15 @@ export default function Perfil() {
     }
 
     return(
-        <div>
-            <Header/>
+        <div className="">
+            <Barra/>
+            <div className="ml-24">
+                <Header/>
+            </div>
 
-            <Link to='/main'>
-                <div style={{ display: 'inline-block' }}>
-                    <img src={volver} alt="icono grande perfil" />
-                </div>
-            </Link>
+            <div className="flex flex-col md:flex-row ml-40 mt-20">
 
-            <div className="flex flex-col md:flex-row">
-
-                <div id="imagen" className="md:w-1/2  flex items-center justify-center">
+                <div id="imagen" className="md:w-1/2 flex items-center justify-center">
                     <img src={perfil} alt="icono grande perfil" />
                 </div>
 

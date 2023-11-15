@@ -45,7 +45,7 @@ export default function Login() {
                 timer: 2000
             });
             console.log("inicio de sesión correcto");
-            navigate('/main');
+            navigate('/libros');
             } else {
             // Otro código de estado, en este caso 401
             Swal.fire({
@@ -106,8 +106,8 @@ export default function Login() {
                         </div>
                         <div className="items-center justify-center text-center">
                             <div className='mb-4 '>
-                                <Link to='/main'>
-                                    <button className="mx-3 hover:shadow-red-500 bg-blue-600 hover:bg-blue-800 text-white text-lg font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                <Link to='/libros'>
+                                    <button className="mx-3 bg-blue-600 hover:bg-blue-800 text-white text-lg font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                     type="submit" onClick={login} >
                                         Ingresar
                                     </button>
