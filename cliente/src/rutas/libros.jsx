@@ -2,19 +2,20 @@ import Header from "./header";
 import Barra from './barra';
 import portada_nula from '../logos/PORTADA-NULA.png'
 import Axios from "axios";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 
 export default function Main(){
-    const [librosList,setLibros] = useState([]);
+    const [librosList, setLibros] = useState([]);
 
-    const getUsuarios = () => {
+    useEffect(() => {
+        const getUsuarios = () => {
+            Axios.get("http://localhost:3001/libros").then((response)=>{
+                setLibros(response.data);
+            });
+        };
 
-        Axios.get("http://localhost:3001/libros").then((response)=>{
-            setLibros(response.data);
-        });
-    }
-
-    getUsuarios();
+        getUsuarios();
+    }, []);
 
     return(
         <div >

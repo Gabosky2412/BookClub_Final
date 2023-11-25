@@ -1,10 +1,13 @@
 import Header from "./header";
 import Barra from "./barra";
+import andres from '../imgs/andres.jpg'
+import github from '../icons/github.png'
+import insta from '../icons/instagram.png'
 
 export default function Main() {
     
     return (
-        <div className="fondo ml-24 " >
+        <div className="fondo " >
             <Header />
             <Barra />
             <div className="font-bold px-64 text-black">
@@ -36,9 +39,59 @@ export default function Main() {
                 <li>
                     <h2 className="text-5xl font-semibold text-center mb-12">Participantes</h2>
                     <ul>
-                    <li className="text-lg font-semibold text-center">Andres Camilo Gaviria - Lider / Creador</li>
-                    <li className="text-lg font-semibold text-center">Juan David Galindo - subLider / Ayudante</li>
-                    <li className="text-lg font-semibold text-center">Juan Carlos Silva - Ayudante</li>
+
+                    <div className="w-96 mx-auto rounded-lg shadow-xl border-4 border-slate-900 mb-16">
+                        <div className="text-center">
+                            <img src={andres} alt="Profile Photo" className="rounded-lg w-60 h-60 mt-4 mx-auto shadow-xl" />
+                        </div>
+                        <div className="p-6">
+                            <h2 className="text-2xl font-bold mb-2 text-center">Andres Camilo Gaviria</h2>
+                            <p className="text-sm text-gray-600 mb-4 text-left">Lider / Creador</p>
+                            <p className="text-sm text-gray-600 text-left mb-4">
+                                Creador y dueño de este proyecto, Programador Front-End y Back-End Junior de 7mo semestre de Ingenieria de sistemas
+                                en la uniersidad Santiago de Cali, Gymrat, guitarrista y adicto a los carros
+                            </p>
+                            <div className="text-lg">
+                                <div className="flex items-center">
+                                    <img src={github} className="w-4 h-4" />
+                                    <a href="https://github.com/Gabosky2412" target="_blank" rel="noopener noreferrer" className="ml-2">GitHub</a>
+                                </div>
+                                <div className="flex items-center">
+                                    <img src={insta} className="w-4 h-4" />
+                                    <a href="https://www.instagram.com/camilo.gabo/" target="_blank" rel="noopener noreferrer" className="ml-2">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="w-96 mx-auto rounded-lg overflow-hidden shadow-xl text-center border-4 border-slate-900 mb-16">
+                        <div className=" h-36 overflow-hidden text-center aling-center">
+                            <img src="" alt="Profile Photo" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="p-6">
+                            <h2 className="text-2xl font-bold mb-2">Juan David Galindo</h2>
+                            <p className="text-sm text-gray-600 mb-4 text-left">SubLider / Ayudante</p>
+                            <p className="text-sm text-gray-600 text-left">
+                                Creador y dueño de este proyecto, trabajando arduamente en el día a día y así poder tener la mejor entrega posible
+                                con herramientas gratis y usando VITE, React, JSX, Express, MySQL, etc.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="w-96 mx-auto rounded-lg overflow-hidden shadow-xl text-center border-4 border-slate-900 mb-16">
+                        <div className=" h-36 overflow-hidden text-center aling-center">
+                            <img src="" alt="Profile Photo" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="p-6">
+                            <h2 className="text-2xl font-bold mb-2">Juan Carlos Silva</h2>
+                            <p className="text-sm text-gray-600 mb-4 text-left">SubLider / Ayudante</p>
+                            <p className="text-sm text-gray-600 text-left">
+                                Creador y dueño de este proyecto, trabajando arduamente en el día a día y así poder tener la mejor entrega posible
+                                con herramientas gratis y usando VITE, React, JSX, Express, MySQL, etc.
+                            </p>
+                        </div>
+                    </div>
                     </ul>
                 </li>
                 </ul>

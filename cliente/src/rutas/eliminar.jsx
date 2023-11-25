@@ -9,27 +9,37 @@ export default function Eliminar() {
     const { register, reset, handleSubmit, formState: { errors }} = useForm();
 
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
-
+        
         Axios.delete(`http://localhost:3001/delete/${data.correo}`)
-        .then(() => {
-            Swal.fire({
-                title: "<strong>Eliminación Exitosa</strong>",
-                html: `<i>Tus datos se eliminaron correctamente</i>`,
-                icon: 'success',
-                timer: 2000,
+            .then((response) => {
+                if (response.status === 200) {
+                    // Éxito al eliminar
+                    Swal.fire({
+                        title: "<strong>Eliminación Exitosa</strong>",
+                        html: `<i>Tus datos se eliminaron correctamente</i>`,
+                        icon: 'success',
+                        timer: 2000,
+                    });
+                    reset();
+                } else {
+                    // El servidor responde, pero hay algún error
+                    Swal.fire({
+                        title: "<strong>Error en el servidor</strong>",
+                        html: "Por favor, inténtalo de nuevo más tarde.",
+                        icon: 'error',
+                    });
+                }
+            })
+            .catch((error) => {
+                // Error al conectar con el servidor
+                console.log(error);
+                Swal.fire({
+                    title: "<strong>Error de verificacion</strong>",
+                    html: "No encontramos tu correo, por favor verifica tus datos y vuelve a intentarlo.",
+                    icon: 'error',
+                });
             });
-            reset();
-        }).catch((error) => {
-            console.log(error);
-            Swal.fire({
-                title: "<strong>Eliminación Fallida</strong>",
-                html: "Por favor verifica tus datos",
-                icon: 'error',
-            });
-        });
-
-    })
+    });
 
     return (
         <div>
