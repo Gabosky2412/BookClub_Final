@@ -8,10 +8,12 @@ export default function Main() {
     
     return (
         <div className="fondo " >
-            <Header />
+            <div className="ml-24">
+                <Header />
+            </div>
             <Barra />
-            <div className="font-bold px-64 text-black">
-            <ul className="my-32 text-2xl">
+            <div className="font-bold px-64 text-black ">
+            <ul className="my-32 text-2xl ml-16">
                 <li>
                     <h2 className="text-5xl font-semibold text-center mb-12">¿Qué es Book Club?</h2>
                     <p className="text-lg">
@@ -21,8 +23,8 @@ export default function Main() {
                     para cualquier persona, con un libro real y que cumpla con ciertos requisitos.
                     </p>
                 </li>
-                </ul>
-                <ul className="my-32 text-2xl">
+            </ul>
+            <ul className="my-32 text-2xl ml-16">
                 <li>
                     <h2 className="text-5xl font-semibold text-center mb-12">¿Cómo se creó Book Club?</h2>
                     <p className="text-lg">
@@ -34,7 +36,7 @@ export default function Main() {
                     librerías extra como Axios, SweetAlert2 y Cors.
                     </p>
                 </li>
-                </ul>
+            </ul>
                 <ul className="my-32 text-2xl">
                 <li>
                     <h2 className="text-5xl font-semibold text-center mb-12">Participantes</h2>

@@ -1,5 +1,6 @@
 import Header from "./header";
 import Barra from './barra';
+import Slider from "./img_slider";
 import portada_nula from '../logos/PORTADA-NULA.png'
 import Axios from "axios";
 import { useState, useEffect  } from "react";
@@ -24,6 +25,11 @@ export default function Main(){
             <Header/>
             <h1 className="font-bold text-5xl text-center mt-8 mb-14 ">LEE LOS MEJORES LIBROS</h1>
 
+            
+            <div className="flex justify-center mb-8 "> 
+                <Slider />
+            </div> 
+                
                 {
                     librosList.map((val)=>{ 
 
