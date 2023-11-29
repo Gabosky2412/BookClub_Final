@@ -15,16 +15,16 @@
     };
 
     return (
-        <div className="w-full w-3/12 mb-12 shadow-2xl border border-black">
+        <div className="w-full  w-3/12 mb-12 shadow-2xl border border-black">
         <Slider {...settings}>
             <div>
-            <img src={ADMDT} alt="Andres" className="w-full" />
+            <img src={ADMDT} alt="ADMDT" className="w-full" />
             </div>
             <div>
-            <img src={ADD} alt="Example" className="w-full" />
+            <img src={ADD} alt="ADD" className="w-full" />
             </div>
             <div>
-            <img src={RYJ} alt="Logo" className="w-full" />
+            <img src={RYJ} alt="RYJ" className="w-full" />
             </div>
         </Slider>
         </div>

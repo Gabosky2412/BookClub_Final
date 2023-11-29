@@ -1,6 +1,8 @@
 import Header from "./header";
 import Barra from "./barra";
 import andres from '../imgs/andres.jpg'
+import galindo from '../imgs/galindo.jpg'
+import silva from '../imgs/silva.jpg'
 import github from '../icons/github.png'
 import insta from '../icons/instagram.png'
 
@@ -12,7 +14,7 @@ export default function Main() {
                 <Header />
             </div>
             <Barra />
-            <div className="font-bold px-64 text-black ">
+            <div className="font-bold px-64 text-black">
             <ul className="my-32 text-2xl ml-16">
                 <li>
                     <h2 className="text-5xl font-semibold text-center mb-12">¿Qué es Book Club?</h2>
@@ -37,21 +39,19 @@ export default function Main() {
                     </p>
                 </li>
             </ul>
-                <ul className="my-32 text-2xl">
-                <li>
+            
                     <h2 className="text-5xl font-semibold text-center mb-12">Participantes</h2>
-                    <ul>
-
-                    <div className="w-96 mx-auto rounded-lg shadow-xl border-4 border-slate-900 mb-16">
+            
+                    <div className="w-96 mx-auto rounded-lg shadow-xl border-4 border-slate-900 mb-16 bg-purple-300">
                         <div className="text-center">
                             <img src={andres} alt="Profile Photo" className="rounded-lg w-60 h-60 mt-4 mx-auto shadow-xl" />
                         </div>
                         <div className="p-6">
                             <h2 className="text-2xl font-bold mb-2 text-center">Andres Camilo Gaviria</h2>
-                            <p className="text-sm text-gray-600 mb-4 text-left">Lider / Creador</p>
+                            <p className="text-sm text-gray-600 mb-4 text-left">Lider </p>
                             <p className="text-sm text-gray-600 text-left mb-4">
-                                Creador y dueño de este proyecto, Programador Front-End y Back-End Junior de 7mo semestre de Ingenieria de sistemas
-                                en la uniersidad Santiago de Cali, Gymrat, guitarrista y adicto a los carros
+                                Lider y programador Front-End y Back-End en este proyecto, cursando 7mo semestre de Ingenieria de sistemas
+                                en la uniersidad Santiago de Cali, Gymrat, guitarrista y adicto a los carros.
                             </p>
                             <div className="text-lg">
                                 <div className="flex items-center">
@@ -67,36 +67,45 @@ export default function Main() {
                     </div>
 
 
-                    <div className="w-96 mx-auto rounded-lg overflow-hidden shadow-xl text-center border-4 border-slate-900 mb-16">
-                        <div className=" h-36 overflow-hidden text-center aling-center">
-                            <img src="" alt="Profile Photo" className="w-full h-full object-cover" />
+                    <div className="w-96 mx-auto rounded-lg overflow-hidden shadow-xl text-center border-4 border-slate-900 mb-16 bg-red-300">
+                        <div className="text-center">
+                            <img src={galindo} alt="Profile Photo" className="rounded-lg w-60 h-60 mt-4 mx-auto shadow-xl" />
                         </div>
                         <div className="p-6">
                             <h2 className="text-2xl font-bold mb-2">Juan David Galindo</h2>
-                            <p className="text-sm text-gray-600 mb-4 text-left">SubLider / Ayudante</p>
+                            <p className="text-sm text-gray-600 mb-4 text-left">Programador </p>
                             <p className="text-sm text-gray-600 text-left">
-                                Creador y dueño de este proyecto, trabajando arduamente en el día a día y así poder tener la mejor entrega posible
-                                con herramientas gratis y usando VITE, React, JSX, Express, MySQL, etc.
+                                Programador y Diseñador del proyecto. Estudiante de 6to semestre de Ing. de Sistemas de la Universidad Santiago 
+                                de Cali, músico y líder de una banda de rock.
                             </p>
+                            <div className="text-lg mt-2">
+                                <div className="flex items-center">
+                                    <img src={insta} className="w-4 h-4" />
+                                    <a href="https://www.instagram.com/jdavid_mga04/" target="_blank" rel="noopener noreferrer" className="ml-2 ">Instagram</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="w-96 mx-auto rounded-lg overflow-hidden shadow-xl text-center border-4 border-slate-900 mb-16">
-                        <div className=" h-36 overflow-hidden text-center aling-center">
-                            <img src="" alt="Profile Photo" className="w-full h-full object-cover" />
+                    <div className="w-96 mx-auto rounded-lg overflow-hidden shadow-xl text-center border-4 border-slate-900 mb-16 bg-blue-300">
+                    <div className="text-center">
+                            <img src={silva} alt="Profile Photo" className="rounded-lg w-60 h-60 mt-4 mx-auto shadow-xl" />
                         </div>
                         <div className="p-6">
                             <h2 className="text-2xl font-bold mb-2">Juan Carlos Silva</h2>
-                            <p className="text-sm text-gray-600 mb-4 text-left">SubLider / Ayudante</p>
+                            <p className="text-sm text-gray-600 mb-4 text-left">Programador</p>
                             <p className="text-sm text-gray-600 text-left">
-                                Creador y dueño de este proyecto, trabajando arduamente en el día a día y así poder tener la mejor entrega posible
-                                con herramientas gratis y usando VITE, React, JSX, Express, MySQL, etc.
+                                Programador y Administrador del proyecto. Estudiante 7mo semestre de ingeniería de sistemas de la Universidad Santiago 
+                                de Cali, como pasatiempos me gusta leer, los atardeceres y viajar.
                             </p>
+                            <div className="text-lg mt-2">
+                                <div className="flex items-center">
+                                    <img src={insta} className="w-4 h-4" />
+                                    <a href="https://instagram.com/carlossilva.9812?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="ml-2 ">Instagram</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </ul>
-                </li>
-                </ul>
             </div>
         </div>
     );
